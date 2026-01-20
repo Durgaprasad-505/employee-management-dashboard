@@ -1,0 +1,220 @@
+.table-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--background);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+.employee-table thead {
+  background: var(--background);
+  border-bottom: 2px solid var(--border);
+}
+
+.employee-table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.employee-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.employee-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.employee-table tbody tr:hover {
+  background: var(--background);
+}
+
+.employee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.td-id {
+  font-weight: 600;
+  color: var(--text-tertiary);
+  font-family: var(--font-body);
+}
+
+.td-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.employee-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border);
+}
+
+.employee-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-toggle {
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.status-toggle.active {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.status-toggle.active:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.status-toggle.inactive {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.status-toggle.inactive:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.td-actions {
+  width: 120px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.btn-edit {
+  color: var(--accent);
+}
+
+.btn-edit:hover {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: var(--accent);
+}
+
+.btn-delete {
+  color: var(--error);
+}
+
+.btn-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: var(--error);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-tertiary);
+}
+
+.empty-state svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  font-size: 0.95rem;
+}
+
+@media print {
+  .table-wrapper {
+    border: none;
+  }
+
+  .employee-table {
+    font-size: 10pt;
+  }
+
+  .employee-table th,
+  .employee-table td {
+    padding: 8px;
+  }
+
+  .employee-photo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .employee-table {
+    font-size: 0.813rem;
+  }
+
+  .employee-table th,
+  .employee-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .employee-photo {
+    width: 40px;
+    height: 40px;
+  }
+}
